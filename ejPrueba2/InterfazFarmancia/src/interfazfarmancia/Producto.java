@@ -58,7 +58,6 @@ public abstract class Producto implements IEspeciales {
     @Override
     public boolean existencia(int cantidad) {
         if (stock >= cantidad) {
-            despacho(cantidad);
             return true;
         }
         return false;

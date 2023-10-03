@@ -39,11 +39,11 @@ public class Manejadora {
         int auxiliar = 0;
         if (pos == -1) {
             pro.add(pp);
-            return "Se ha agregado exitosamente el producto " + pro.get(pos).getNombre();
+            return "Se ha agregado exitosamente el producto "+ pp.getNombre() ;
         } else {
             auxiliar = pro.get(pos).getStock() + pp.getStock();
             pro.get(pos).setStock(auxiliar);
-            return "Este producto ya existe, se ha aumentado el stock -> " + pro.get(pos).getStock();
+            return "Este producto ya existe, se ha aumentado el stock ";
         }
     }
 

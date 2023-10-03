@@ -13,10 +13,10 @@ public class Pastilla extends Producto {
     public Pastilla(String codigo, String nombre, int valorReferencial, int stock) {
         super(codigo, nombre, valorReferencial, stock);
     }
-    
     @Override
     public int totalPagar(int cantidad){
-        if(super.existencia(cantidad)){  
+        if(existencia(cantidad)){
+            despacho(cantidad);
             return (int) ((super.getValorReferencial() * cantidad) *IVA);
         }
         return 0;
